@@ -22,12 +22,17 @@
         </tr>
       <tbody>
         {% for widget in widgets %}
-            <tr>
-                <td>{{ widget.description }}</td>
-                <td>{{ widget.quantity }}</td>
-                <td><a href="{% url 'delete_widget' widget.id %}">X</a></td>
-            </tr>
+          <tr>
+            <td>{{ widget.description }}</td>
+            <td>{{ widget.quantity }}</td>
+            <td><a href="{% url 'delete_widget' widget.id %}">X</a></td>
+          </tr>
         {% endfor %}
+          <tr>
+            <td><strong>Total Quantity</strong></td>
+            <td>{{ total }}</td>
+            <td></td>
+          </tr>
         </tbody>
       </thead>
     </table>
