@@ -10,5 +10,10 @@
 </head>
 <body>
   <h1>Wacky Widgets</h1>
+  {% if widgets|length == 0 %}
+<h3>No Widgets Exist</h3><hr>
+  {% else %}
+<p>Widgets</p>
+  {% endif %}
 </body>
 </html>

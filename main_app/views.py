@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.generic.edit import CreateView
 from .models import Widget
 
 
@@ -6,3 +7,7 @@ from .models import Widget
 def index(request):
     widgets = Widget.objects.all()
     return render(request, 'index.html', {'widgets': widgets})
+
+class WidgetCreate(CreateView):
+    model = Widget
+    fields = "__all__"
